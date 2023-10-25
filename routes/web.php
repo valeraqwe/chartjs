@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\ProgramUsageController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/program-usage-data', [ProgramUsageController::class, 'index']);
+
+Route::get('/show-chart', [ChartController::class, 'showChart']);
 
